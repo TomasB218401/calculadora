@@ -63,7 +63,7 @@ namespace Calculadora_tb
             // se utiliza el valor de la propiedad tag
             Button btn_oper = sender as Button;
             //le asigna el valor de un string a la variable Opera que depende del tag asignado al boton, ej el boton btn_simbolo_suma tiene asignado el tag "S"
-           
+           //hola
             
             if (btn_oper.Text == ",")
             {
