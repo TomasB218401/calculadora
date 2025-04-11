@@ -19,6 +19,7 @@ namespace Calculadora_tb
         }
         string Opera = "";
         double[] valores = { 0, 0 };
+
         
         
         //Agregue un try catch para que no pinche el programa
@@ -47,6 +48,34 @@ namespace Calculadora_tb
             }
 
         }
+
+        public void Realizarcoma(Button btn_g)
+        {
+            if (btn_g.Text == ",")
+            {
+                if (txb_datos.Text.Contains(","))
+                {
+
+                }
+                else if (txb_datos.Text != "")
+                {
+                    txb_datos.Text += ",";
+                }
+                else
+                {
+                    
+                    txb_datos.Text += "0,";
+                }
+            }
+            else
+            {
+
+                Opera = btn_g.Tag.ToString();
+                HabilitarOperaciones(false);
+                guardarValor();
+            }
+
+        }
         
         //Funcion que habilita o desabilita los botones segun el parametro del bool que se le de. (Funcion con parametros de entrada)
         private void HabilitarOperaciones(bool habilitar)
@@ -63,29 +92,19 @@ namespace Calculadora_tb
             // se utiliza el valor de la propiedad tag
             Button btn_oper = sender as Button;
             //le asigna el valor de un string a la variable Opera que depende del tag asignado al boton, ej el boton btn_simbolo_suma tiene asignado el tag "S"
-           //hola
+            //hola
+
+            /*
             
-            if (btn_oper.Text == ",")
-            {
-                if (txb_datos.Text.Contains(","))
-                    {
-                    
-                    }
-                else if(txb_datos.Text != "")
-                    {
-                    txb_datos.Text += ",";
-                    }
-                else
-                {
-                    txb_datos.Text += "0,";
-                }
-            }else
-            {
-                
-                Opera = btn_oper.Tag.ToString();
-                HabilitarOperaciones(false);
-                guardarValor();
-            }
+
+            */
+            Realizarcoma(btn_oper);
+
+
+
+
+
+
         }
 
 
@@ -134,6 +153,13 @@ namespace Calculadora_tb
         private void btn_simbolo_CEborrar_Click(object sender, EventArgs e)
         {
             txb_datos.Clear();
+            //for que permite borrar los valores del array []valores
+            for (int i = 0; i < valores.Length; i++)
+            {
+                valores[i] = 0;
+            }
+
+
             HabilitarOperaciones(true); // habilitar boton de operaciones
         }
 
