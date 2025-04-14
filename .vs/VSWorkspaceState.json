@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Calculadora_tb",
+    "\\Calculadora_tb\\Calculadora_tb"
   ],
-  "SelectedNode": "\\Calculadora_tb.sln",
+  "SelectedNode": "\\Calculadora_tb\\Calculadora_tb.sln",
   "PreviewInSolutionExplorer": false
 }

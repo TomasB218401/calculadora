@@ -48,7 +48,7 @@ namespace Calculadora_tb
             }
 
         }
-
+        //funcion que valida la entrada de comas
         public void Realizarcoma(Button btn_g)
         {
             if (btn_g.Text == ",")
@@ -99,12 +99,6 @@ namespace Calculadora_tb
 
             */
             Realizarcoma(btn_oper);
-
-
-
-
-
-
         }
 
 
